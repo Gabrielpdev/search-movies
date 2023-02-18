@@ -6,8 +6,8 @@ import { Provider } from 'react-redux'
 import { ThemeProvider } from '@ui5/webcomponents-react'
 import { App } from './pages/App'
 
-import './styles/global.scss'
 import { store } from './store'
+import './styles/global.scss'
 
 const rootElement = document.getElementById('root') as HTMLElement
 const root = createRoot(rootElement)
