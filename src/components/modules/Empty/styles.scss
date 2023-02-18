@@ -1,0 +1,22 @@
+@import '../../../styles/library';
+
+.empty-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+
+    font-size: $xlg;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+
+    font-size: $lg;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/library';
+
+.movie-content {
+  margin: auto;
+
+  > img {
+    object-fit: contain;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  > div {
+    margin-left: 50px;
+
+    .title {
+      font-size: $xlg;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .plot {
+      font-size: $md;
+      margin-bottom: 10px;
+
+      max-height: 300px;
+
+      overflow: auto;
+    }
+
+    .data {
+      display: flex;
+      gap: 5px 15px;
+      flex-wrap: wrap;
+    }
+
+    .actors {
+      display: inline-block;
+      font-size: $md;
+
+      strong {
+        margin-right: 5px;
+      }
+    }
+
+    .review {
+      font-size: $md;
+      margin-top: 10px;
+
+      strong {
+        margin-right: 7px;
+      }
+
+      svg:last-child {
+        margin-right: 10px;
+      }
+    }
+
+    .button {
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/library';
+
+.button {
+  width: 150px;
+  min-height: 38px;
+
+  font-size: $md;
+  font-weight: bold;
+
+  border-radius: 8px;
+
+  // background-color: #fff;
+
+  &[design='Negative'] {
+    background: #a20000;
+    color: $white500;
+
+    &[icon='heart-2'] {
+      color: #a20000;
+      background-color: #ffafaf;
+    }
+  }
+}

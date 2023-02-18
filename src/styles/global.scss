@@ -1,0 +1,45 @@
+@import './library';
+
+:root {
+  font-size: 60%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body,
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: $black500;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}

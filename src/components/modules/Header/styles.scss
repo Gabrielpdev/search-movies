@@ -1,0 +1,56 @@
+@import '../../../styles/library';
+
+.header {
+  z-index: 1;
+  position: relative;
+
+  background: linear-gradient(0deg, rgba(124, 73, 0, 0) 0, #2a1c01 100%);
+  width: 100%;
+
+  padding: 20px 100px;
+}
+
+.logo {
+  font-size: $xlg;
+  font-weight: bold;
+
+  color: $white500;
+  text-shadow: 4px 6px 6px rgba(0, 0, 0, 1);
+
+  gap: 10px;
+
+  img {
+    width: 50px;
+  }
+}
+
+.search {
+  background: rgb(52 52 52 / 51%) !important;
+  border: none;
+  width: 240px;
+
+  padding: 5px 15px;
+  border-radius: 10px;
+
+  input {
+    outline: none;
+    background: transparent;
+    border: none;
+    color: $white500;
+  }
+
+  .button {
+    width: 40px !important;
+
+    &:hover {
+      background: transparent;
+      border: none;
+    }
+
+    .icon {
+      color: white;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
