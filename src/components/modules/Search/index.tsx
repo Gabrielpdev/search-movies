@@ -1,38 +1,29 @@
 import { FlexBox } from '@ui5/webcomponents-react'
-import { useEffect, useState } from 'react'
 import { useAppDispatch } from '../../../hooks'
-import { addMovie, useFetchMovieByTitleQuery } from '../../../store/slices/search/search-slice'
+import { addSearch } from '../../../store/slices/search/search-slice'
 import './styles.scss'
 
-export function Search() {
-  const [search, setSearch] = useState({
-    id: '',
-    plot: '',
-    title: '',
-    type: '',
-    year: ''
-  })
+interface SearchProps {
+  isFetching: boolean
+}
 
+export function Search({ isFetching }: SearchProps) {
   const dispatch = useAppDispatch()
-
-  const { data } = useFetchMovieByTitleQuery(search)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleSubmitSearch(event: any) {
     event.preventDefault()
 
-    setSearch({
-      id: event.target.id.value,
-      plot: event.target.plot.value,
-      title: event.target.search.value,
-      type: event.target.type.value,
-      year: event.target.year.value
-    })
+    dispatch(
+      addSearch({
+        id: event.target.id.value,
+        plot: event.target.plot.value,
+        title: event.target.search.value,
+        type: event.target.type.value,
+        year: event.target.year.value
+      })
+    )
   }
-
-  useEffect(() => {
-    dispatch(addMovie(data))
-  }, [data, dispatch])
 
   return (
     <form onSubmit={handleSubmitSearch} className="search-form">
@@ -74,7 +65,9 @@ export function Search() {
           </select>
         </label>
 
-        <button type="submit">Search</button>
+        <button type="submit" disabled={isFetching}>
+          Search
+        </button>
       </FlexBox>
     </form>
   )

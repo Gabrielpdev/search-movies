@@ -44,6 +44,7 @@ interface queryType {
 
 interface IInitialState {
   movie: SearchState
+  search: queryType
 }
 
 export const searchApiSlice = createApi({
@@ -63,7 +64,14 @@ export const searchApiSlice = createApi({
 })
 
 const initialState: IInitialState = {
-  movie: undefined
+  movie: undefined,
+  search: {
+    id: '',
+    plot: '',
+    title: '',
+    type: '',
+    year: ''
+  }
 }
 
 const searchSlice = createSlice({
@@ -72,11 +80,14 @@ const searchSlice = createSlice({
   reducers: {
     addMovie(state, action: PayloadAction<SearchState>) {
       state.movie = action.payload
+    },
+    addSearch(state, action: PayloadAction<queryType>) {
+      state.search = action.payload
     }
   }
 })
 
 export const { useFetchMovieByTitleQuery } = searchApiSlice
 
-export const { addMovie } = searchSlice.actions
+export const { addMovie, addSearch } = searchSlice.actions
 export default searchSlice.reducer

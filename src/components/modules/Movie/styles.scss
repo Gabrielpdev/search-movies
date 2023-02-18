@@ -59,4 +59,24 @@
       margin-top: 5px;
     }
   }
+
+  @media (max-width: 825px) {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    > img {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    > div {
+      margin-left: 0px;
+
+      .button {
+        margin: 15px auto;
+      }
+    }
+  }
 }

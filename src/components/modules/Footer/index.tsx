@@ -1,4 +1,3 @@
-import React from 'react'
 import { FlexBox } from '@ui5/webcomponents-react'
 import './styles.scss'
 

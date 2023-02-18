@@ -2,12 +2,12 @@
 
 .wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .image {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-image: url('../../../public/assets/bg.jpg');
@@ -41,8 +41,28 @@
   padding: 0 16px;
 
   height: calc(100% - 325px);
-  margin: 0 auto;
+  margin: auto;
 
   color: $white500;
   text-shadow: 4px 6px 6px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 825px) {
+  .wrapper {
+    position: relative;
+    height: 100%;
+
+    .image {
+      height: 200%;
+
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+
+  .container {
+    height: calc(200% + 100px);
+    margin: 90px 0;
+  }
 }
