@@ -38,7 +38,7 @@
 
     border-radius: 50%;
 
-    margin-left: auto;
+    margin: 0 0 30px auto;
 
     --_ui5_icon_transform_scale: scale(2);
     --sapButton_Attention_Background: #ffbd84;
@@ -77,6 +77,6 @@
 
   .container {
     height: calc(200% + 100px);
-    margin: 90px 0;
+    margin: 0px 0;
   }
 }

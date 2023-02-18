@@ -21,4 +21,8 @@
     color: $white500;
     font-size: $lg;
   }
+
+  @media (max-width: 825px) {
+    margin: 90px 0;
+  }
 }
