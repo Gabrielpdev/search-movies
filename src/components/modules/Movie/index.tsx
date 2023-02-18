@@ -1,5 +1,4 @@
-import { FlexBox } from '@ui5/webcomponents-react'
-import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
+import { FlexBox, Icon, Label } from '@ui5/webcomponents-react'
 import './styles.scss'
 import { Button } from '../../elements/Button'
 import { useAppDispatch, useAppSelector } from '../../../hooks'
@@ -34,70 +33,74 @@ export function Movie() {
       <div>
         <h3 className="title">{movie?.Title}</h3>
 
-        {movie?.Plot !== 'N/A' && <p className="plot">{movie?.Plot}</p>}
+        {movie?.Plot !== 'N/A' && (
+          <Label wrappingType="Normal" className="plot">
+            {movie?.Plot}
+          </Label>
+        )}
 
         <div className="data">
           {movie?.Genre !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Genre: </strong>
               {movie?.Genre}
-            </p>
+            </Label>
           )}
 
           {movie?.Language !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Language: </strong>
               {movie?.Language}
-            </p>
+            </Label>
           )}
 
           {movie?.Country !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Country: </strong>
               {movie?.Country}
-            </p>
+            </Label>
           )}
 
           {movie?.Writer !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Writer: </strong>
               {movie?.Writer}
-            </p>
+            </Label>
           )}
 
           {movie?.Runtime !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Runtime: </strong>
               {movie?.Runtime}
-            </p>
+            </Label>
           )}
 
           {movie?.Actors !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Actors: </strong>
               {movie?.Actors}
-            </p>
+            </Label>
           )}
 
           {movie?.Released !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Released: </strong>
               {movie?.Released}
-            </p>
+            </Label>
           )}
 
           {movie?.Year !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Year: </strong>
               {movie?.Year}
-            </p>
+            </Label>
           )}
 
           {movie?.Awards !== 'N/A' && (
-            <p className="actors">
+            <Label wrappingType="Normal" className="actors">
               <strong>Awards: </strong>
               {movie?.Awards}
-            </p>
+            </Label>
           )}
         </div>
 
@@ -105,9 +108,9 @@ export function Movie() {
           <FlexBox alignItems="Center" justifyContent="Start" className="review">
             <strong>Review: </strong>
             {stars.map((_, index) => {
-              if (review > index + 1) return <AiFillStar key={index} />
+              if (review > index + 1) return <Icon name="favorite" className="star" key={index} />
 
-              return <AiOutlineStar key={index} />
+              return <Icon name="unfavorite" className="star" key={index} />
             })}
             {review}
           </FlexBox>

@@ -9,7 +9,8 @@
 
   border-radius: 8px;
 
-  // background-color: #fff;
+  --_ui5_icon_transform_scale: scale(2);
+  --_ui5_button_base_icon_margin: 1rem;
 
   &[design='Negative'] {
     background: #a20000;

@@ -19,9 +19,12 @@
     }
 
     .plot {
-      font-size: $md;
+      font-size: $xmd;
+      font-weight: 300;
+
       margin-bottom: 10px;
 
+      color: $white500;
       max-height: 300px;
 
       overflow: auto;
@@ -35,23 +38,32 @@
 
     .actors {
       display: inline-block;
-      font-size: $md;
+      font-size: $xsm;
+      color: $white500;
 
       strong {
+        font-size: $md;
         margin-right: 5px;
       }
     }
 
     .review {
       font-size: $md;
-      margin-top: 10px;
+      margin: 10px 0;
+      gap: 5px;
 
       strong {
         margin-right: 7px;
       }
 
-      svg:last-child {
-        margin-right: 10px;
+      .star {
+        width: 20px;
+        height: 20px;
+        color: $white500;
+
+        &:last-child {
+          margin-right: 10px;
+        }
       }
     }
 
