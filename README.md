@@ -8,7 +8,7 @@
 
 ## Demo
 
-<a href='#' target="__blank">DEMO</a>
+<a href='https://search-movies-gabrielpdev.vercel.app' target="__blank">DEMO</a>
 
 ## Description
 
@@ -16,12 +16,12 @@ You can search movies, series or episodes by title, year or IMDb ID.
 
 ## Objectives
 
-- [x] Capacidade de componentização de conteúdo;
-- [x] Organização de código;
+- [x] Content componentization capability;
+- [x] Code organization;
 - [x] Layout / (UI);
-- [x] Usabilidade / (UX);
-- [x] Conhecimento na linguagem utilizada;
-- [x] Responsividade do conteúdo
+- [x] Usability / (UX);
+- [x] Knowledge of the language used;
+- [x] Responsiveness for content
 
 ## Requirements
 
@@ -37,11 +37,14 @@ You can search movies, series or episodes by title, year or IMDb ID.
 
 <img src='.github/performance.png' width='450px' />
 
----
-
----
-
 ## Installation and execution
+
+**Copy .env.example and add YOUR api_key on REACT_APP_API_KEY**
+you can create your api key here [API key](http://www.omdbapi.com/apikey.aspx?__EVENTTARGET=freeAcct)
+
+```
+REACT_APP_API_KEY=[Your API key]
+```
 
 **Installation of dependencies**
 
@@ -67,3 +70,4 @@ yarn storybook
 
 - [x] Eslit + Prettier
 - [x] Storybook
+- [x] Deployed on Vercel
