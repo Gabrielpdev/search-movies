@@ -108,7 +108,7 @@ export function Movie() {
           <FlexBox alignItems="Center" justifyContent="Start" className="review">
             <strong>Review: </strong>
             {stars.map((_, index) => {
-              if (review > index + 1) return <Icon name="favorite" className="star" key={index} />
+              if (review >= index + 1) return <Icon name="favorite" className="star" key={index} />
 
               return <Icon name="unfavorite" className="star" key={index} />
             })}

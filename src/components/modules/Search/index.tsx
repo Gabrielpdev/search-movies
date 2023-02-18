@@ -59,9 +59,9 @@ export function Search({ isFetching }: SearchProps) {
 
         <label htmlFor="plot">
           Plot:
-          <select placeholder="Long" id="plot">
+          <select placeholder="Full" id="plot">
             <option value="short">Short</option>
-            <option value="long">Long</option>
+            <option value="full">Full</option>
           </select>
         </label>
 
